@@ -5,9 +5,9 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-if( ! class_exists( 'mishaUpdateChecker' ) ) {
+if( ! class_exists( 'curaUpdateChecker' ) ) {
 
-	class mishaUpdateChecker{
+	class curaUpdateChecker{
 
 		public $plugin_slug;
 		public $version;
@@ -17,8 +17,8 @@ if( ! class_exists( 'mishaUpdateChecker' ) ) {
 		public function __construct() {
 
 			$this->plugin_slug = plugin_basename( __DIR__ );
-			$this->version = '1.0';
-			$this->cache_key = 'misha_custom_upd';
+			$this->version = '1.1.1';
+			$this->cache_key = 'cura_custom_upd';
 			$this->cache_allowed = false;
 
 			add_filter( 'plugins_api', array( $this, 'info' ), 20, 3 );
@@ -131,7 +131,7 @@ if( ! class_exists( 'mishaUpdateChecker' ) ) {
 			) {
 				$res = new stdClass();
 				$res->slug = $this->plugin_slug;
-				$res->plugin = plugin_basename( __FILE__ ); // misha-update-plugin/misha-update-plugin.php
+				$res->plugin = plugin_basename( __FILE__ ); // cura-update-plugin/cura-update-plugin.php
 				$res->new_version = $remote->version;
 				$res->tested = $remote->tested;
 				$res->package = $remote->download_url;
@@ -160,6 +160,6 @@ if( ! class_exists( 'mishaUpdateChecker' ) ) {
 
 	}
 
-	new mishaUpdateChecker();
+	new curaUpdateChecker();
 
 }
