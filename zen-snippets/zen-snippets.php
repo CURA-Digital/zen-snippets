@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Zen (CURA Digital Snippets)
  * Description: A collection of PHP snippets used on all CURA Digital sites.
- * Version: 1.1.3
+ * Version: 1.1.4
  * Author: CURA Digital
  * Author URI: https://curadigital.io
  */
