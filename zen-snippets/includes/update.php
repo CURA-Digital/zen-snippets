@@ -34,7 +34,7 @@ if( ! class_exists( 'curaUpdateChecker' ) ) {
 			if( false === $remote || ! $this->cache_allowed ) {
 
 				$remote = wp_remote_get(
-					'https://rudrastyh.com/wp-content/uploads/updater/info.json',
+					'https://github.com/CURA-Digital/zen-snippets/blob/main/info.json',
 					array(
 						'timeout' => 10,
 						'headers' => array(
